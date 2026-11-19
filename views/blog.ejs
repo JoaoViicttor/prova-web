@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Meu Blog</title>
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #eeeeee;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .post {
+            background: white;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>MEU BLOG</h1>
+
+    <a href="/cadastrar_post">Criar Post</a>
+
+    <% posts.forEach(post => { %>
+        <div class="post">
+            <h2><%= post.titulo %></h2>
+            <h3><%= post.resumo %></h3>
+            <p><%= post.conteudo %></p>
+        </div>
+    <% }) %>
+
+    <br>
+    <a href="/">Voltar</a>
+</body>
+</html>
